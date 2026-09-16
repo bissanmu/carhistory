@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 170" fill="none" role="img" aria-labelledby="truck-title">
+  <title id="truck-title">둥근 파란색 화물 트럭</title>
+  <!-- Palette: DESIGN.md screenshot-derived vehicle tokens. Contact edge: x=184. -->
+  <g id="truck">
+    <g id="truck-body">
+      <path d="M44 44C44 26.327 58.327 12 76 12H163C174.598 12 184 21.402 184 33V132H44V44Z" fill="#CCD9E1"/>
+      <path d="M76 12H118C98.67 12 83 27.67 83 47V132H44V44C44 26.327 58.327 12 76 12Z" fill="#E0E8F0"/>
+      <path d="M83 106H184V132H83V106Z" fill="#BDCDD7"/>
+      <path d="M10 137H180V147H26C18.2 147 12.52 143.15 10 137Z" fill="#4D5965"/>
+      <g id="truck-cabin">
+        <path d="M4 77C4 62.641 15.641 51 30 51H88C93.523 51 98 55.477 98 61V143H15C8.925 143 4 138.075 4 132V77Z" fill="#188AF4"/>
+        <path d="M29 51H88C93.523 51 98 55.477 98 61V143H34V76C34 66.093 39.47 57.465 47.55 53H29V51Z" fill="#0055B9"/>
+        <path d="M4 78C4 73.048 5.385 68.418 7.789 64.478H34V96H4V78Z" fill="#C8E6F8"/>
+        <path d="M4 119H34V129H4V119Z" fill="#58B5C6"/>
+        <path d="M4 133H96V143H15C9.262 143 4.551 138.607 4.044 133H4Z" fill="#A8DDEA"/>
+        <path d="M34 143V77C34 66.507 42.507 58 53 58H86V143H34Z" fill="#188AF4"/>
+        <path d="M34 126H86V143H34V126Z" fill="#0055B9"/>
+        <g id="truck-window"><path d="M43 76C43 69.925 47.925 65 54 65H73C76.314 65 79 67.686 79 71V90C79 93.314 76.314 96 73 96H43V76Z" fill="#C8E6F8"/></g>
+        <path d="M70 103H77" stroke="#0055B9" stroke-width="4" stroke-linecap="round"/>
+        <path d="M4 109H32V116H4V109Z" fill="#C8E6F8"/>
+      </g>
+      <path d="M169 131H184V141H169V131Z" fill="#A8DDEA"/>
+    </g>
+    <g id="truck-wheel-front">
+      <circle cx="40" cy="148" r="18" fill="#4D5965"/>
+      <circle cx="40" cy="148" r="12" fill="#929BA5"/>
+      <circle cx="40" cy="148" r="6" fill="#E0E8F0"/>
+    </g>
+    <g id="truck-wheel-rear">
+      <circle cx="144" cy="148" r="18" fill="#4D5965"/>
+      <circle cx="144" cy="148" r="12" fill="#929BA5"/>
+      <circle cx="144" cy="148" r="6" fill="#E0E8F0"/>
+    </g>
+  </g>
+</svg>

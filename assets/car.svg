@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 110" fill="none" role="img" aria-labelledby="car-title">
+  <title id="car-title">밝은 청록색 스테이션 왜건</title>
+  <!-- Palette: DESIGN.md screenshot-derived vehicle tokens. Contact edge: x=2. -->
+  <g id="car">
+    <g id="car-body">
+      <g id="car-roof-rack">
+        <path d="M72 20V14H155V20M97 13V21M137 13V21" stroke="#278B9D" stroke-width="5" stroke-linecap="round"/>
+        <path d="M66 11C66 7.686 68.686 5 72 5H153C156.314 5 159 7.686 159 11V13H66V11Z" fill="#58B5C6"/>
+      </g>
+      <path d="M6 65C6 58.925 10.925 54 17 54H34L52 32C56.557 26.43 63.373 23.2 70.57 23.2H151C159.837 23.2 167 30.363 167 39.2V55H171C175.971 55 180 59.029 180 64V86H9L6 65Z" fill="#58B5C6"/>
+      <path d="M83 25H151C158.732 25 165 31.268 165 39V55H177L180 65V86H62V55L83 25Z" fill="#27A1A9"/>
+      <g id="car-window">
+        <path d="M58 34C60.538 30.875 64.349 29.062 68.375 29.062H85L66 51H43L58 34Z" fill="#C3EDF5"/>
+        <path d="M91 29H113V51H74L91 29Z" fill="#C3EDF5"/>
+        <path d="M120 29H141V51H120V29Z" fill="#C3EDF5"/>
+        <path d="M148 29H151C155.971 29 160 33.029 160 38V51H148V29Z" fill="#C3EDF5"/>
+      </g>
+      <path d="M17 59H64L58 75H14L17 59Z" fill="#A8DDEA"/>
+      <path d="M26 59H34L30 75H22L26 59Z" fill="#E0E8F0"/>
+      <path d="M171 63H180V73H169V65C169 63.895 169.895 63 171 63Z" fill="#C8E6F8"/>
+      <path d="M6 80H180V89H14C9.582 89 6 85.418 6 81V80Z" fill="#278B9D"/>
+      <path d="M4 75H15V85H6C3.791 85 2 83.209 2 81V77C2 75.895 2.895 75 4 75Z" fill="#C8E6F8"/>
+      <path d="M174 78H180V85H174V78Z" fill="#A8DDEA"/>
+      <path d="M112 59H118M144 59H150" stroke="#278B9D" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g id="car-wheel-front">
+      <circle cx="48" cy="89" r="15" fill="#4D5965"/>
+      <circle cx="48" cy="89" r="10" fill="#929BA5"/>
+      <circle cx="48" cy="89" r="4.5" fill="#E0E8F0"/>
+    </g>
+    <g id="car-wheel-rear">
+      <circle cx="146" cy="89" r="15" fill="#4D5965"/>
+      <circle cx="146" cy="89" r="10" fill="#929BA5"/>
+      <circle cx="146" cy="89" r="4.5" fill="#E0E8F0"/>
+    </g>
+  </g>
+</svg>

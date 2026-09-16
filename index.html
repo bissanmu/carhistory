@@ -1,0 +1,151 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>카히스토리 · 자동차 사고 모션 프로토타입</title><link rel="stylesheet" href="style.css"><script defer src="vendor/gsap.min.js"></script><script defer src="script.js"></script></head><body>
+<div class="utility"><div class="wrap"><div><span><b>◆</b> 실손24</span><span><b>◧</b> 보험개발원</span><span><b>◈</b> 보험정보 빅데이터 플랫폼</span></div><div class="utility-right">♧ 상담하기　　로그인　　◎ 언어 선택⌄</div></div></div>
+<header class="nav wrap"><a href="./index.html" aria-label="카히스토리 홈"><svg class="logo" viewBox="0 0 130 44" aria-hidden="true"><path d="M3 27c3-13 8-15 18-15l9-7h36l10 8h18l9 8-6 10" fill="none" stroke="#F02B36" stroke-width="3.5" stroke-linecap="round"/><text x="9" y="31" font-family="Arial,sans-serif" font-size="22" font-weight="800" letter-spacing="-1.5" fill="#171C24">CarHistory</text></svg></a><nav class="nav-links" aria-label="주요 메뉴"><a href="#services">이용안내</a><a href="#lookup">조회하기</a><a href="#services">차량 통계</a><a href="#services">고객지원</a><a href="#services">기업제휴</a></nav><div class="nav-tools"><strong>● 요금/포인트 안내</strong><a href="#services">≡ 전체메뉴</a></div></header>
+<main class="wrap"><div class="hero-row"><section class="hero" aria-labelledby="hero-heading"><h1 id="hero-heading">중고차 매장 방문 전,<br><strong>차량 이력부터</strong></h1><p>사고 이력과 수리 내역을 꼼꼼하게 확인하고 AI 분석을<br>통해 차량 상태와 예상 시세까지 한 눈에 살펴보세요.</p><div class="art"><svg class="scene" viewBox="0 0 360 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g id="speed-lines" opacity="0" stroke="#A1DEFF" stroke-width="3" stroke-linecap="round"><path d="M8 107h38M2 121h31M13 137h37M304 146h42M319 158h38M311 169h36"/></g><g transform="translate(0 48)"><g id="truck-motion"><g transform="scale(.9)">
+  
+  <!-- Palette: DESIGN.md screenshot-derived vehicle tokens. Contact edge: x=184. -->
+  <g id="truck">
+    <g id="truck-body">
+      <path d="M44 44C44 26.327 58.327 12 76 12H163C174.598 12 184 21.402 184 33V132H44V44Z" fill="#CCD9E1"/>
+      <path d="M76 12H118C98.67 12 83 27.67 83 47V132H44V44C44 26.327 58.327 12 76 12Z" fill="#E0E8F0"/>
+      <path d="M83 106H184V132H83V106Z" fill="#BDCDD7"/>
+      <path d="M10 137H180V147H26C18.2 147 12.52 143.15 10 137Z" fill="#4D5965"/>
+      <g id="truck-cabin">
+        <path d="M4 77C4 62.641 15.641 51 30 51H88C93.523 51 98 55.477 98 61V143H15C8.925 143 4 138.075 4 132V77Z" fill="#188AF4"/>
+        <path d="M29 51H88C93.523 51 98 55.477 98 61V143H34V76C34 66.093 39.47 57.465 47.55 53H29V51Z" fill="#0055B9"/>
+        <path d="M4 78C4 73.048 5.385 68.418 7.789 64.478H34V96H4V78Z" fill="#C8E6F8"/>
+        <path d="M4 119H34V129H4V119Z" fill="#58B5C6"/>
+        <path d="M4 133H96V143H15C9.262 143 4.551 138.607 4.044 133H4Z" fill="#A8DDEA"/>
+        <path d="M34 143V77C34 66.507 42.507 58 53 58H86V143H34Z" fill="#188AF4"/>
+        <path d="M34 126H86V143H34V126Z" fill="#0055B9"/>
+        <g id="truck-window"><path d="M43 76C43 69.925 47.925 65 54 65H73C76.314 65 79 67.686 79 71V90C79 93.314 76.314 96 73 96H43V76Z" fill="#C8E6F8"/></g>
+        <path d="M70 103H77" stroke="#0055B9" stroke-width="4" stroke-linecap="round"/>
+        <path d="M4 109H32V116H4V109Z" fill="#C8E6F8"/>
+      </g>
+      <path d="M169 131H184V141H169V131Z" fill="#A8DDEA"/>
+    </g>
+    <g id="truck-wheel-front">
+      <circle cx="40" cy="148" r="18" fill="#4D5965"/>
+      <circle cx="40" cy="148" r="12" fill="#929BA5"/>
+      <circle cx="40" cy="148" r="6" fill="#E0E8F0"/>
+    </g>
+    <g id="truck-wheel-rear">
+      <circle cx="144" cy="148" r="18" fill="#4D5965"/>
+      <circle cx="144" cy="148" r="12" fill="#929BA5"/>
+      <circle cx="144" cy="148" r="6" fill="#E0E8F0"/>
+    </g>
+  </g>
+</g></g></g><g transform="translate(200 109)"><g id="car-motion"><g transform="scale(.85)">
+  
+  <!-- Palette: DESIGN.md screenshot-derived vehicle tokens. Contact edge: x=2. -->
+  <g id="car">
+    <g id="car-body">
+      <g id="car-roof-rack">
+        <path d="M72 20V14H155V20M97 13V21M137 13V21" stroke="#278B9D" stroke-width="5" stroke-linecap="round"/>
+        <path d="M66 11C66 7.686 68.686 5 72 5H153C156.314 5 159 7.686 159 11V13H66V11Z" fill="#58B5C6"/>
+      </g>
+      <path d="M6 65C6 58.925 10.925 54 17 54H34L52 32C56.557 26.43 63.373 23.2 70.57 23.2H151C159.837 23.2 167 30.363 167 39.2V55H171C175.971 55 180 59.029 180 64V86H9L6 65Z" fill="#58B5C6"/>
+      <path d="M83 25H151C158.732 25 165 31.268 165 39V55H177L180 65V86H62V55L83 25Z" fill="#27A1A9"/>
+      <g id="car-window">
+        <path d="M58 34C60.538 30.875 64.349 29.062 68.375 29.062H85L66 51H43L58 34Z" fill="#C3EDF5"/>
+        <path d="M91 29H113V51H74L91 29Z" fill="#C3EDF5"/>
+        <path d="M120 29H141V51H120V29Z" fill="#C3EDF5"/>
+        <path d="M148 29H151C155.971 29 160 33.029 160 38V51H148V29Z" fill="#C3EDF5"/>
+      </g>
+      <path d="M17 59H64L58 75H14L17 59Z" fill="#A8DDEA"/>
+      <path d="M26 59H34L30 75H22L26 59Z" fill="#E0E8F0"/>
+      <path d="M171 63H180V73H169V65C169 63.895 169.895 63 171 63Z" fill="#C8E6F8"/>
+      <path d="M6 80H180V89H14C9.582 89 6 85.418 6 81V80Z" fill="#278B9D"/>
+      <path d="M4 75H15V85H6C3.791 85 2 83.209 2 81V77C2 75.895 2.895 75 4 75Z" fill="#C8E6F8"/>
+      <path d="M174 78H180V85H174V78Z" fill="#A8DDEA"/>
+      <path d="M112 59H118M144 59H150" stroke="#278B9D" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g id="car-wheel-front">
+      <circle cx="48" cy="89" r="15" fill="#4D5965"/>
+      <circle cx="48" cy="89" r="10" fill="#929BA5"/>
+      <circle cx="48" cy="89" r="4.5" fill="#E0E8F0"/>
+    </g>
+    <g id="car-wheel-rear">
+      <circle cx="146" cy="89" r="15" fill="#4D5965"/>
+      <circle cx="146" cy="89" r="10" fill="#929BA5"/>
+      <circle cx="146" cy="89" r="4.5" fill="#E0E8F0"/>
+    </g>
+  </g>
+</g></g></g><g transform="translate(151 111) scale(.8)"><g class="effects"><g id="impact"><g id="impact-lines" stroke="#FFE59B" stroke-width="2" stroke-linecap="round"><path id="impact-line-1" d="M25 10 21 2"/><path id="impact-line-2" d="m61 28 10-6"/><path id="impact-line-3" d="m64 58 11 3"/></g><g id="impact-star"><path d="m37 53-12-38 16 20L60 15 51 41 77 36 55 53 73 69 50 64 49 88 38 68 25 81 29 61 12 54 30 46Z" fill="#FFBD36"/><path d="m38 50-7-21 12 16 10-15-6 20 17-6-17 13 14 9-18-4 1 15-8-17-8 8 6-13-12-3Z" fill="#FFF5B8"/><path d="m39 45 4 9 10 2-10 5-3 10-4-11-8-4 9-3Z" fill="#fff"/></g><g id="particles" fill="#EDF8FF"><path id="particle-1" d="m24 33 3-6 4 8-5 2Z"/><path id="particle-2" d="m55 30 4-5 3 8-6 2Z"/><path id="particle-3" d="m61 56 6-3 1 4-6 3Z"/><circle id="particle-4" cx="24" cy="66" r="2"/></g><g id="smoke" fill="#BDDDFA"><circle id="smoke-1" cx="36" cy="55" r="9"/><circle id="smoke-2" cx="42" cy="48" r="12"/><circle id="smoke-3" cx="35" cy="39" r="14"/><circle id="smoke-4" cx="29" cy="28" r="16"/></g></g></g></g></svg></div>
+<form id="lookup" class="lookup"><div class="lookup-top"><strong>차량번호 입력만으로 사고이력을 조회해보세요.</strong><small>ⓘ 해당 사고이력조회는 유료결제가 필요합니다.</small></div><div class="lookup-row"><div class="radio-group"><label><input type="radio" name="type" value="plate" checked>차량번호</label><label><input type="radio" name="type" value="vin">차대번호</label></div><div class="search-field"><input id="vehicle-number" aria-label="차량번호" placeholder="띄어쓰기 없이 차량번호를 입력해주세요. 123가1234" autocomplete="off" required><button aria-label="사고이력 조회" type="submit"><svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.6"/><path d="m15 15 5 5" stroke="currentColor" stroke-width="1.6"/></svg></button></div></div><div class="lookup-message" aria-live="polite"></div></form></section>
+<section class="side flood"><h2>침수차량도<br>조회도<br><strong>카스토리에서!</strong></h2><svg class="mini-art" viewBox="0 0 210 170" aria-hidden="true"><g transform="translate(10 30) rotate(16 90 70)">
+  
+  <!-- Palette: DESIGN.md screenshot-derived vehicle tokens. Contact edge: x=2. -->
+  <g>
+    <g>
+      <g>
+        <path d="M72 20V14H155V20M97 13V21M137 13V21" stroke="#278B9D" stroke-width="5" stroke-linecap="round"/>
+        <path d="M66 11C66 7.686 68.686 5 72 5H153C156.314 5 159 7.686 159 11V13H66V11Z" fill="#58B5C6"/>
+      </g>
+      <path d="M6 65C6 58.925 10.925 54 17 54H34L52 32C56.557 26.43 63.373 23.2 70.57 23.2H151C159.837 23.2 167 30.363 167 39.2V55H171C175.971 55 180 59.029 180 64V86H9L6 65Z" fill="#58B5C6"/>
+      <path d="M83 25H151C158.732 25 165 31.268 165 39V55H177L180 65V86H62V55L83 25Z" fill="#27A1A9"/>
+      <g>
+        <path d="M58 34C60.538 30.875 64.349 29.062 68.375 29.062H85L66 51H43L58 34Z" fill="#C3EDF5"/>
+        <path d="M91 29H113V51H74L91 29Z" fill="#C3EDF5"/>
+        <path d="M120 29H141V51H120V29Z" fill="#C3EDF5"/>
+        <path d="M148 29H151C155.971 29 160 33.029 160 38V51H148V29Z" fill="#C3EDF5"/>
+      </g>
+      <path d="M17 59H64L58 75H14L17 59Z" fill="#A8DDEA"/>
+      <path d="M26 59H34L30 75H22L26 59Z" fill="#E0E8F0"/>
+      <path d="M171 63H180V73H169V65C169 63.895 169.895 63 171 63Z" fill="#C8E6F8"/>
+      <path d="M6 80H180V89H14C9.582 89 6 85.418 6 81V80Z" fill="#278B9D"/>
+      <path d="M4 75H15V85H6C3.791 85 2 83.209 2 81V77C2 75.895 2.895 75 4 75Z" fill="#C8E6F8"/>
+      <path d="M174 78H180V85H174V78Z" fill="#A8DDEA"/>
+      <path d="M112 59H118M144 59H150" stroke="#278B9D" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g>
+      <circle cx="48" cy="89" r="15" fill="#4D5965"/>
+      <circle cx="48" cy="89" r="10" fill="#929BA5"/>
+      <circle cx="48" cy="89" r="4.5" fill="#E0E8F0"/>
+    </g>
+    <g>
+      <circle cx="146" cy="89" r="15" fill="#4D5965"/>
+      <circle cx="146" cy="89" r="10" fill="#929BA5"/>
+      <circle cx="146" cy="89" r="4.5" fill="#E0E8F0"/>
+    </g>
+  </g>
+</g></svg><button data-demo="무료 침수 조회">무료 침수 조회 ↗</button></section><section class="side"><h2>폐차여부<br>조회도<br><strong>카스토리에서!</strong></h2><svg class="mini-art" viewBox="0 0 210 170" aria-hidden="true"><g transform="translate(10 30) rotate(16 90 70)">
+  
+  <!-- Palette: DESIGN.md screenshot-derived vehicle tokens. Contact edge: x=2. -->
+  <g>
+    <g>
+      <g>
+        <path d="M72 20V14H155V20M97 13V21M137 13V21" stroke="#278B9D" stroke-width="5" stroke-linecap="round"/>
+        <path d="M66 11C66 7.686 68.686 5 72 5H153C156.314 5 159 7.686 159 11V13H66V11Z" fill="#58B5C6"/>
+      </g>
+      <path d="M6 65C6 58.925 10.925 54 17 54H34L52 32C56.557 26.43 63.373 23.2 70.57 23.2H151C159.837 23.2 167 30.363 167 39.2V55H171C175.971 55 180 59.029 180 64V86H9L6 65Z" fill="#58B5C6"/>
+      <path d="M83 25H151C158.732 25 165 31.268 165 39V55H177L180 65V86H62V55L83 25Z" fill="#27A1A9"/>
+      <g>
+        <path d="M58 34C60.538 30.875 64.349 29.062 68.375 29.062H85L66 51H43L58 34Z" fill="#C3EDF5"/>
+        <path d="M91 29H113V51H74L91 29Z" fill="#C3EDF5"/>
+        <path d="M120 29H141V51H120V29Z" fill="#C3EDF5"/>
+        <path d="M148 29H151C155.971 29 160 33.029 160 38V51H148V29Z" fill="#C3EDF5"/>
+      </g>
+      <path d="M17 59H64L58 75H14L17 59Z" fill="#A8DDEA"/>
+      <path d="M26 59H34L30 75H22L26 59Z" fill="#E0E8F0"/>
+      <path d="M171 63H180V73H169V65C169 63.895 169.895 63 171 63Z" fill="#C8E6F8"/>
+      <path d="M6 80H180V89H14C9.582 89 6 85.418 6 81V80Z" fill="#278B9D"/>
+      <path d="M4 75H15V85H6C3.791 85 2 83.209 2 81V77C2 75.895 2.895 75 4 75Z" fill="#C8E6F8"/>
+      <path d="M174 78H180V85H174V78Z" fill="#A8DDEA"/>
+      <path d="M112 59H118M144 59H150" stroke="#278B9D" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g>
+      <circle cx="48" cy="89" r="15" fill="#4D5965"/>
+      <circle cx="48" cy="89" r="10" fill="#929BA5"/>
+      <circle cx="48" cy="89" r="4.5" fill="#E0E8F0"/>
+    </g>
+    <g>
+      <circle cx="146" cy="89" r="15" fill="#4D5965"/>
+      <circle cx="146" cy="89" r="10" fill="#929BA5"/>
+      <circle cx="146" cy="89" r="4.5" fill="#E0E8F0"/>
+    </g>
+  </g>
+</g></svg><button data-demo="무료 폐차 조회">무료 폐차 조회 ↗</button></section></div>
+<section class="quick" aria-label="자주 찾는 서비스"><button data-demo="차량예측시세"><svg viewBox="0 0 46 50" fill="none" aria-hidden="true"><rect x="7" y="5" width="29" height="37" rx="3" fill="#DDEBFF"/><path d="M7 8h29" stroke="#54D4F0" stroke-width="5"/><path d="M12 17h18M12 23h12M12 29h12" stroke="white" stroke-width="3"/><circle cx="33" cy="34" r="9" fill="#2467FF"/><path d="m29 34 3 3 5-6" stroke="white" stroke-width="2"/><path d="M3 14v6m-3-3h6M40 3v6m-3-3h6" stroke="#83CCFF"/></svg><span>차량예측시세</span></button><button data-demo="요금안내"><svg viewBox="0 0 46 50" aria-hidden="true"><rect x="19" y="7" width="23" height="32" rx="6" fill="#FFD878"/><path d="M24 13h17M24 19h17M24 25h17M24 31h17" stroke="#FFBE39" stroke-width="2"/><circle cx="18" cy="28" r="16" fill="#FFC645"/><circle cx="18" cy="28" r="12" fill="none" stroke="#FFE392" stroke-width="2"/><text x="18" y="34" text-anchor="middle" font-size="17" fill="#FFF3C1">₩</text></svg><span>요금안내</span></button><button data-demo="샘플보고서 보기"><svg viewBox="0 0 46 50" fill="none" aria-hidden="true"><rect x="7" y="5" width="29" height="37" rx="3" fill="#DDEBFF"/><path d="M7 8h29" stroke="#54D4F0" stroke-width="5"/><path d="M12 17h18M12 23h12M12 29h12" stroke="white" stroke-width="3"/><circle cx="33" cy="34" r="9" fill="#2467FF"/><path d="m29 34 3 3 5-6" stroke="white" stroke-width="2"/><path d="M3 14v6m-3-3h6M40 3v6m-3-3h6" stroke="#83CCFF"/></svg><span>샘플보고서 보기</span></button></section>
+<section class="features" id="services"><div class="intro"><h2>사고이력 조회부터<br>차량 분석까지</h2><p>사고 이력과 차량 정보를 바탕으로 다양한 분석을 제공하며,<br>차량의 상태와 가치를 보다 쉽게 확인하실 수 있습니다.</p></div><article class="feature"><svg viewBox="0 0 46 50" fill="none" aria-hidden="true"><rect x="7" y="5" width="29" height="37" rx="3" fill="#DDEBFF"/><path d="M7 8h29" stroke="#54D4F0" stroke-width="5"/><path d="M12 17h18M12 23h12M12 29h12" stroke="white" stroke-width="3"/><circle cx="33" cy="34" r="9" fill="#2467FF"/><path d="m29 34 3 3 5-6" stroke="white" stroke-width="2"/><path d="M3 14v6m-3-3h6M40 3v6m-3-3h6" stroke="#83CCFF"/></svg><h3>AI 사고 분석</h3><p>차량의 사고 이력을 바탕으로 사고 내용과 손상 정보를 분석하여 차량 상태를 확인합니다.</p></article><article class="feature"><svg viewBox="0 0 46 50" fill="none" aria-hidden="true"><rect x="7" y="5" width="29" height="37" rx="3" fill="#DDEBFF"/><path d="M7 8h29" stroke="#54D4F0" stroke-width="5"/><path d="M12 17h18M12 23h12M12 29h12" stroke="white" stroke-width="3"/><circle cx="33" cy="34" r="9" fill="#2467FF"/><path d="m29 34 3 3 5-6" stroke="white" stroke-width="2"/><path d="M3 14v6m-3-3h6M40 3v6m-3-3h6" stroke="#83CCFF"/></svg><h3>수리비 상세 분석</h3><p>사고 수리비와 수리 내역을 바탕으로 수리 범위와 내용을 자세하게 확인하실 수 있습니다.</p></article><article class="feature"><svg viewBox="0 0 46 50" aria-hidden="true"><rect x="19" y="7" width="23" height="32" rx="6" fill="#FFD878"/><path d="M24 13h17M24 19h17M24 25h17M24 31h17" stroke="#FFBE39" stroke-width="2"/><circle cx="18" cy="28" r="16" fill="#FFC645"/><circle cx="18" cy="28" r="12" fill="none" stroke="#FFE392" stroke-width="2"/><text x="18" y="34" text-anchor="middle" font-size="17" fill="#FFF3C1">₩</text></svg><h3>차량 시세 예측</h3><p>차량의 주요 정보와 이력을 바탕으로 해당 차량의 예상 시세를 확인하실 수 있습니다.</p></article></section><p class="prototype-note">모션 확인용 프로토타입 · 실제 차량 조회 및 결제는 제공하지 않습니다. · 새로고침하면 모션을 다시 볼 수 있습니다.</p></main>
+<dialog id="demo-dialog"><h2></h2><p>현재 화면은 자동차 모션을 확인하는 프로토타입입니다. 실제 조회 서비스에는 연결되어 있지 않습니다.</p><form method="dialog"><button>확인</button></form></dialog></body></html>
